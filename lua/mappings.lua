@@ -1,13 +1,5 @@
 local map = vim.api.nvim_set_keymap
 
--- load telescope-project dependencies before running it
-vim.cmd [[
-function TelescopeProject()
-    PackerLoad telescope.nvim telescope-project.nvim
-    lua require'telescope'.extensions.project.project{}
-endfunction
-]]
-
 vim.g.mapleader = ' ' -- space
 map('n' , ' '  , ''      , {}  ) -- unmap space in normal mode
 map('v' , ' '  , ''      , {}  ) -- unmap space in visual and select mode
